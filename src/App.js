@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import SplashPage from "./SplashPage";
+import ProductPage from "./ProductPage";
+import CartPage from "./CartPage";
+import { useState } from "react";
 
 function App() {
+  const [cartedItems, addToCart] = useState([]);
+  const [prodArrIndex, setProdArrIndex] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <SplashPage prodArrIndex={prodArrIndex} cartedItems={cartedItems} />
+          }
+        />
+        <Route
+          exact
+          path="/products"
+          element={
+            <ProductPage
+              cart={cartedItems}
+              addToCart={addToCart}
+              prodArrIndex={prodArrIndex}
+              changeProductArr={setProdArrIndex}
+            />
+          }
+        />
+        <Route
+          exact
+          path="/cart"
+          element={<CartPage cart={cartedItems} addToCart={addToCart} />}
+        />
+      </Routes>
+    </>
   );
 }
 

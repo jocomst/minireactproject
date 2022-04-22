@@ -1,38 +1,163 @@
-.App {
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.giant-flex {
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.title {
+  font-size: 25px;
+  margin-left: 2rem;
+}
+
+.home-title {
+  font-size: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* splash page css */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* navbar styling */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+}
+
+.nav-bar h3 {
+  margin-left: 2rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+  margin-right: 4rem;
+}
+
+/* carousel styles */
+
+.carousel-img {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-img img {
+  height: 450px;
+  width: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-img button {
+  height: fit-content;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* front display */
+
+.front-display {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.product-box {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.front-display img {
+  height: 200px;
+  width: 200px;
+}
+
+/* product page */
+
+.page-btn-container {
+  margin-left: 2rem;
+}
+
+.product-container {
+  display: flex;
+}
+
+.main-product img {
+  height: 300px;
+  width: 500px;
+}
+
+.lower-portion img {
+  height: 50px;
+  width: 50px;
+}
+
+/* cart page */
+
+.single-item {
+  display: flex;
+  max-height: fit-content;
+  justify-content: space-around;
+  margin-right: 3rem;
+}
+
+.line {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.cart-container {
+  border: 2px solid darkslategrey;
+  margin: 3rem;
+}
+
+.sub-cost {
+  display: flex;
+  max-height: fit-content;
+  justify-content: space-around;
+  margin-right: 3rem;
+}
+
+.payment-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-box {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+
+.boxes {
+  margin-bottom: 0.5rem;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  bottom: 5px;
+  left: 50%;
+  right: 50%;
+}
+
+.footer a {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
